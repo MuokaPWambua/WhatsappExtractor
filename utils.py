@@ -4,6 +4,11 @@ from bs4 import BeautifulSoup
 import json
 import re
 
+def read_json_file(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    return data
+
 def extract_group_info(url):
     try:
         
@@ -48,7 +53,6 @@ def is_valid_whatsapp_group_url(url):
 
     return match 
 
-# Provide the URL of the WhatsApp groups page
-url = 'https://chat.whatsapp.com/JgNcXT9kdmb0Dw13XE331X'  
+
 
 
